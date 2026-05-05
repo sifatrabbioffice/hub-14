@@ -1,0 +1,15 @@
+name: WinHub
+targets:
+  WinHub:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources: [WinHub]
+    settings:
+      base:
+        PRODUCT_NAME: WinHub
+        INFOPLIST_FILE: WinHub/Info.plist
+        # Enable JIT and high-performance memory
+        GCC_PREPROCESSOR_DEFINITIONS: "JIT_ENABLED=1"
+        # Required for 3D games (Metal API)
+        MTL_ENABLE_DEBUG_INFO: NO
